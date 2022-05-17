@@ -1,0 +1,705 @@
+  [1m[35m (16.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (10.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateMovies (20220517183212)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "director" varchar, "storyline" text, "watched_on" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220517183212"]]
+  [1m[35m (14.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-05-17 18:46:23.654104"], ["updated_at", "2022-05-17 18:46:23.654104"]]
+  [1m[35m (10.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateMovies (20220517183212)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (3.3ms)[0m  [1m[35mDROP TABLE "movies"[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20220517183212"]]
+  [1m[35m (12.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateMovies (20220517183212)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "movies" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "director" varchar, "storyline" text, "watched_on" date, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220517183212"]]
+  [1m[35m (10.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.0ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Soul"], ["director", "Pete Docter"], ["storyline", "After landing the gig of a lifetime, a New York jazz pianist suddenly finds himself trapped in a strange land between Earth and the afterlife."], ["watched_on", "2022-05-10"], ["created_at", "2022-05-17 18:53:15.496703"], ["updated_at", "2022-05-17 18:53:15.496703"]]
+  [1m[35m (11.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Lord of the Rings: The Fellowship of the Ring"], ["director", "Peter Jackson"], ["storyline", "The Fellowship of the Ring embark on a journey to destroy the One Ring and end Sauron's reign over Middle-earth. A young Hobbit known as Frodo has been thrown on an amazing adventure, when he is appointed the job of destroying the One Ring, which was created by the Dark Lord Sauron."], ["watched_on", "2020-05-17"], ["created_at", "2022-05-17 18:53:15.514721"], ["updated_at", "2022-05-17 18:53:15.514721"]]
+  [1m[35m (8.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Terminator 2"], ["director", "James Cameron"], ["storyline", "Terminator 2 follows Sarah Connor and her ten-year-old son John as they are pursued by a new, more advanced Terminator: the liquid metal, shapeshifting T-1000, sent back in time to kill John Connor and prevent him from becoming the leader of the human resistance."], ["watched_on", "2019-05-17"], ["created_at", "2022-05-17 18:53:15.524390"], ["updated_at", "2022-05-17 18:53:15.524390"]]
+  [1m[35m (5.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "movies"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "movies"."title" FROM "movies"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateGenres (20220517185506)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "genres" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220517185506"]]
+  [1m[35m (14.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (5.0ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Action"], ["created_at", "2022-05-17 18:57:04.946766"], ["updated_at", "2022-05-17 18:57:04.946766"]]
+  [1m[35m (11.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Sci-Fi"], ["created_at", "2022-05-17 18:57:04.970694"], ["updated_at", "2022-05-17 18:57:04.970694"]]
+  [1m[35m (6.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Adventure"], ["created_at", "2022-05-17 18:57:04.978770"], ["updated_at", "2022-05-17 18:57:04.978770"]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "genres"[0m
+  [1m[36mMovie Load (1.0ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.2ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = ?[0m  [["id", 1]]
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = ?[0m  [["id", 2]]
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = ?[0m  [["id", 3]]
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Soul"], ["director", "Pete Docter"], ["storyline", "After landing the gig of a lifetime, a New York jazz pianist suddenly finds himself trapped in a strange land between Earth and the afterlife."], ["watched_on", "2022-05-10"], ["created_at", "2022-05-17 18:57:38.111418"], ["updated_at", "2022-05-17 18:57:38.111418"]]
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Lord of the Rings: The Fellowship of the Ring"], ["director", "Peter Jackson"], ["storyline", "The Fellowship of the Ring embark on a journey to destroy the One Ring and end Sauron's reign over Middle-earth. A young Hobbit known as Frodo has been thrown on an amazing adventure, when he is appointed the job of destroying the One Ring, which was created by the Dark Lord Sauron."], ["watched_on", "2020-05-17"], ["created_at", "2022-05-17 18:57:38.118699"], ["updated_at", "2022-05-17 18:57:38.118699"]]
+  [1m[35m (5.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Terminator 2"], ["director", "James Cameron"], ["storyline", "Terminator 2 follows Sarah Connor and her ten-year-old son John as they are pursued by a new, more advanced Terminator: the liquid metal, shapeshifting T-1000, sent back in time to kill John Connor and prevent him from becoming the leader of the human resistance."], ["watched_on", "2019-05-17"], ["created_at", "2022-05-17 18:57:38.126526"], ["updated_at", "2022-05-17 18:57:38.126526"]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "movies"[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.3ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = ?[0m  [["id", 4]]
+  [1m[35m (15.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = ?[0m  [["id", 5]]
+  [1m[35m (7.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "movies" WHERE "movies"."id" = ?[0m  [["id", 6]]
+  [1m[35m (7.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 0"], ["director", "Director 0"], ["storyline", "Storyline 0"], ["watched_on", "2022-05-17"], ["created_at", "2022-05-17 19:02:58.698768"], ["updated_at", "2022-05-17 19:02:58.698768"]]
+  [1m[35m (8.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 1"], ["director", "Director 1"], ["storyline", "Storyline 1"], ["watched_on", "2022-05-16"], ["created_at", "2022-05-17 19:02:58.708639"], ["updated_at", "2022-05-17 19:02:58.708639"]]
+  [1m[35m (5.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 2"], ["director", "Director 2"], ["storyline", "Storyline 2"], ["watched_on", "2022-05-15"], ["created_at", "2022-05-17 19:02:58.715979"], ["updated_at", "2022-05-17 19:02:58.715979"]]
+  [1m[35m (8.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 3"], ["director", "Director 3"], ["storyline", "Storyline 3"], ["watched_on", "2022-05-14"], ["created_at", "2022-05-17 19:02:58.726046"], ["updated_at", "2022-05-17 19:02:58.726046"]]
+  [1m[35m (6.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 4"], ["director", "Director 4"], ["storyline", "Storyline 4"], ["watched_on", "2022-05-13"], ["created_at", "2022-05-17 19:02:58.734347"], ["updated_at", "2022-05-17 19:02:58.734347"]]
+  [1m[35m (6.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 5"], ["director", "Director 5"], ["storyline", "Storyline 5"], ["watched_on", "2022-05-12"], ["created_at", "2022-05-17 19:02:58.742571"], ["updated_at", "2022-05-17 19:02:58.742571"]]
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 6"], ["director", "Director 6"], ["storyline", "Storyline 6"], ["watched_on", "2022-05-11"], ["created_at", "2022-05-17 19:02:58.750203"], ["updated_at", "2022-05-17 19:02:58.750203"]]
+  [1m[35m (8.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.7ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 7"], ["director", "Director 7"], ["storyline", "Storyline 7"], ["watched_on", "2022-05-10"], ["created_at", "2022-05-17 19:02:58.760356"], ["updated_at", "2022-05-17 19:02:58.760356"]]
+  [1m[35m (21.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (5.1ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 8"], ["director", "Director 8"], ["storyline", "Storyline 8"], ["watched_on", "2022-05-09"], ["created_at", "2022-05-17 19:02:58.787865"], ["updated_at", "2022-05-17 19:02:58.787865"]]
+  [1m[35m (12.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 9"], ["director", "Director 9"], ["storyline", "Storyline 9"], ["watched_on", "2022-05-08"], ["created_at", "2022-05-17 19:02:58.806887"], ["updated_at", "2022-05-17 19:02:58.806887"]]
+  [1m[35m (6.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 10"], ["director", "Director 10"], ["storyline", "Storyline 10"], ["watched_on", "2022-05-07"], ["created_at", "2022-05-17 19:02:58.814839"], ["updated_at", "2022-05-17 19:02:58.814839"]]
+  [1m[35m (5.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 11"], ["director", "Director 11"], ["storyline", "Storyline 11"], ["watched_on", "2022-05-06"], ["created_at", "2022-05-17 19:02:58.822492"], ["updated_at", "2022-05-17 19:02:58.822492"]]
+  [1m[35m (5.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 12"], ["director", "Director 12"], ["storyline", "Storyline 12"], ["watched_on", "2022-05-05"], ["created_at", "2022-05-17 19:02:58.830695"], ["updated_at", "2022-05-17 19:02:58.830695"]]
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 13"], ["director", "Director 13"], ["storyline", "Storyline 13"], ["watched_on", "2022-05-04"], ["created_at", "2022-05-17 19:02:58.838409"], ["updated_at", "2022-05-17 19:02:58.838409"]]
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 14"], ["director", "Director 14"], ["storyline", "Storyline 14"], ["watched_on", "2022-05-03"], ["created_at", "2022-05-17 19:02:58.846973"], ["updated_at", "2022-05-17 19:02:58.846973"]]
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 15"], ["director", "Director 15"], ["storyline", "Storyline 15"], ["watched_on", "2022-05-02"], ["created_at", "2022-05-17 19:02:58.853056"], ["updated_at", "2022-05-17 19:02:58.853056"]]
+  [1m[35m (5.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 16"], ["director", "Director 16"], ["storyline", "Storyline 16"], ["watched_on", "2022-05-01"], ["created_at", "2022-05-17 19:02:58.862348"], ["updated_at", "2022-05-17 19:02:58.862348"]]
+  [1m[35m (7.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 17"], ["director", "Director 17"], ["storyline", "Storyline 17"], ["watched_on", "2022-04-30"], ["created_at", "2022-05-17 19:02:58.870956"], ["updated_at", "2022-05-17 19:02:58.870956"]]
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 18"], ["director", "Director 18"], ["storyline", "Storyline 18"], ["watched_on", "2022-04-29"], ["created_at", "2022-05-17 19:02:58.878612"], ["updated_at", "2022-05-17 19:02:58.878612"]]
+  [1m[35m (9.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 19"], ["director", "Director 19"], ["storyline", "Storyline 19"], ["watched_on", "2022-04-28"], ["created_at", "2022-05-17 19:02:58.890757"], ["updated_at", "2022-05-17 19:02:58.890757"]]
+  [1m[35m (5.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 20"], ["director", "Director 20"], ["storyline", "Storyline 20"], ["watched_on", "2022-04-27"], ["created_at", "2022-05-17 19:02:58.899154"], ["updated_at", "2022-05-17 19:02:58.899154"]]
+  [1m[35m (6.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 21"], ["director", "Director 21"], ["storyline", "Storyline 21"], ["watched_on", "2022-04-26"], ["created_at", "2022-05-17 19:02:58.906847"], ["updated_at", "2022-05-17 19:02:58.906847"]]
+  [1m[35m (7.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 22"], ["director", "Director 22"], ["storyline", "Storyline 22"], ["watched_on", "2022-04-25"], ["created_at", "2022-05-17 19:02:58.915447"], ["updated_at", "2022-05-17 19:02:58.915447"]]
+  [1m[35m (7.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 23"], ["director", "Director 23"], ["storyline", "Storyline 23"], ["watched_on", "2022-04-24"], ["created_at", "2022-05-17 19:02:58.924537"], ["updated_at", "2022-05-17 19:02:58.924537"]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 24"], ["director", "Director 24"], ["storyline", "Storyline 24"], ["watched_on", "2022-04-23"], ["created_at", "2022-05-17 19:02:58.930002"], ["updated_at", "2022-05-17 19:02:58.930002"]]
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 25"], ["director", "Director 25"], ["storyline", "Storyline 25"], ["watched_on", "2022-04-22"], ["created_at", "2022-05-17 19:02:58.937682"], ["updated_at", "2022-05-17 19:02:58.937682"]]
+  [1m[35m (5.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 26"], ["director", "Director 26"], ["storyline", "Storyline 26"], ["watched_on", "2022-04-21"], ["created_at", "2022-05-17 19:02:58.943795"], ["updated_at", "2022-05-17 19:02:58.943795"]]
+  [1m[35m (7.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 27"], ["director", "Director 27"], ["storyline", "Storyline 27"], ["watched_on", "2022-04-20"], ["created_at", "2022-05-17 19:02:58.952413"], ["updated_at", "2022-05-17 19:02:58.952413"]]
+  [1m[35m (6.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 28"], ["director", "Director 28"], ["storyline", "Storyline 28"], ["watched_on", "2022-04-19"], ["created_at", "2022-05-17 19:02:58.959885"], ["updated_at", "2022-05-17 19:02:58.959885"]]
+  [1m[35m (7.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 29"], ["director", "Director 29"], ["storyline", "Storyline 29"], ["watched_on", "2022-04-18"], ["created_at", "2022-05-17 19:02:58.968617"], ["updated_at", "2022-05-17 19:02:58.968617"]]
+  [1m[35m (6.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 30"], ["director", "Director 30"], ["storyline", "Storyline 30"], ["watched_on", "2022-04-17"], ["created_at", "2022-05-17 19:02:58.976182"], ["updated_at", "2022-05-17 19:02:58.976182"]]
+  [1m[35m (8.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 31"], ["director", "Director 31"], ["storyline", "Storyline 31"], ["watched_on", "2022-04-16"], ["created_at", "2022-05-17 19:02:58.985323"], ["updated_at", "2022-05-17 19:02:58.985323"]]
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 32"], ["director", "Director 32"], ["storyline", "Storyline 32"], ["watched_on", "2022-04-15"], ["created_at", "2022-05-17 19:02:58.992470"], ["updated_at", "2022-05-17 19:02:58.992470"]]
+  [1m[35m (9.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 33"], ["director", "Director 33"], ["storyline", "Storyline 33"], ["watched_on", "2022-04-14"], ["created_at", "2022-05-17 19:02:59.003062"], ["updated_at", "2022-05-17 19:02:59.003062"]]
+  [1m[35m (7.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 34"], ["director", "Director 34"], ["storyline", "Storyline 34"], ["watched_on", "2022-04-13"], ["created_at", "2022-05-17 19:02:59.012121"], ["updated_at", "2022-05-17 19:02:59.012121"]]
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 35"], ["director", "Director 35"], ["storyline", "Storyline 35"], ["watched_on", "2022-04-12"], ["created_at", "2022-05-17 19:02:59.021830"], ["updated_at", "2022-05-17 19:02:59.021830"]]
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 36"], ["director", "Director 36"], ["storyline", "Storyline 36"], ["watched_on", "2022-04-11"], ["created_at", "2022-05-17 19:02:59.029925"], ["updated_at", "2022-05-17 19:02:59.029925"]]
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 37"], ["director", "Director 37"], ["storyline", "Storyline 37"], ["watched_on", "2022-04-10"], ["created_at", "2022-05-17 19:02:59.036363"], ["updated_at", "2022-05-17 19:02:59.036363"]]
+  [1m[35m (16.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 38"], ["director", "Director 38"], ["storyline", "Storyline 38"], ["watched_on", "2022-04-09"], ["created_at", "2022-05-17 19:02:59.053713"], ["updated_at", "2022-05-17 19:02:59.053713"]]
+  [1m[35m (7.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 39"], ["director", "Director 39"], ["storyline", "Storyline 39"], ["watched_on", "2022-04-08"], ["created_at", "2022-05-17 19:02:59.062844"], ["updated_at", "2022-05-17 19:02:59.062844"]]
+  [1m[35m (15.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 40"], ["director", "Director 40"], ["storyline", "Storyline 40"], ["watched_on", "2022-04-07"], ["created_at", "2022-05-17 19:02:59.079182"], ["updated_at", "2022-05-17 19:02:59.079182"]]
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 41"], ["director", "Director 41"], ["storyline", "Storyline 41"], ["watched_on", "2022-04-06"], ["created_at", "2022-05-17 19:02:59.086613"], ["updated_at", "2022-05-17 19:02:59.086613"]]
+  [1m[35m (9.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 42"], ["director", "Director 42"], ["storyline", "Storyline 42"], ["watched_on", "2022-04-05"], ["created_at", "2022-05-17 19:02:59.096730"], ["updated_at", "2022-05-17 19:02:59.096730"]]
+  [1m[35m (5.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 43"], ["director", "Director 43"], ["storyline", "Storyline 43"], ["watched_on", "2022-04-04"], ["created_at", "2022-05-17 19:02:59.103932"], ["updated_at", "2022-05-17 19:02:59.103932"]]
+  [1m[35m (8.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 44"], ["director", "Director 44"], ["storyline", "Storyline 44"], ["watched_on", "2022-04-03"], ["created_at", "2022-05-17 19:02:59.113136"], ["updated_at", "2022-05-17 19:02:59.113136"]]
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 45"], ["director", "Director 45"], ["storyline", "Storyline 45"], ["watched_on", "2022-04-02"], ["created_at", "2022-05-17 19:02:59.119812"], ["updated_at", "2022-05-17 19:02:59.119812"]]
+  [1m[35m (8.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 46"], ["director", "Director 46"], ["storyline", "Storyline 46"], ["watched_on", "2022-04-01"], ["created_at", "2022-05-17 19:02:59.128880"], ["updated_at", "2022-05-17 19:02:59.128880"]]
+  [1m[35m (5.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 47"], ["director", "Director 47"], ["storyline", "Storyline 47"], ["watched_on", "2022-03-31"], ["created_at", "2022-05-17 19:02:59.136292"], ["updated_at", "2022-05-17 19:02:59.136292"]]
+  [1m[35m (9.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 48"], ["director", "Director 48"], ["storyline", "Storyline 48"], ["watched_on", "2022-03-30"], ["created_at", "2022-05-17 19:02:59.147319"], ["updated_at", "2022-05-17 19:02:59.147319"]]
+  [1m[35m (7.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 49"], ["director", "Director 49"], ["storyline", "Storyline 49"], ["watched_on", "2022-03-29"], ["created_at", "2022-05-17 19:02:59.156027"], ["updated_at", "2022-05-17 19:02:59.156027"]]
+  [1m[35m (5.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 50"], ["director", "Director 50"], ["storyline", "Storyline 50"], ["watched_on", "2022-03-28"], ["created_at", "2022-05-17 19:02:59.163315"], ["updated_at", "2022-05-17 19:02:59.163315"]]
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 51"], ["director", "Director 51"], ["storyline", "Storyline 51"], ["watched_on", "2022-03-27"], ["created_at", "2022-05-17 19:02:59.171121"], ["updated_at", "2022-05-17 19:02:59.171121"]]
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 52"], ["director", "Director 52"], ["storyline", "Storyline 52"], ["watched_on", "2022-03-26"], ["created_at", "2022-05-17 19:02:59.181198"], ["updated_at", "2022-05-17 19:02:59.181198"]]
+  [1m[35m (8.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 53"], ["director", "Director 53"], ["storyline", "Storyline 53"], ["watched_on", "2022-03-25"], ["created_at", "2022-05-17 19:02:59.192685"], ["updated_at", "2022-05-17 19:02:59.192685"]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.3ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 54"], ["director", "Director 54"], ["storyline", "Storyline 54"], ["watched_on", "2022-03-24"], ["created_at", "2022-05-17 19:02:59.200898"], ["updated_at", "2022-05-17 19:02:59.200898"]]
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 55"], ["director", "Director 55"], ["storyline", "Storyline 55"], ["watched_on", "2022-03-23"], ["created_at", "2022-05-17 19:02:59.209052"], ["updated_at", "2022-05-17 19:02:59.209052"]]
+  [1m[35m (5.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 56"], ["director", "Director 56"], ["storyline", "Storyline 56"], ["watched_on", "2022-03-22"], ["created_at", "2022-05-17 19:02:59.218556"], ["updated_at", "2022-05-17 19:02:59.218556"]]
+  [1m[35m (8.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 57"], ["director", "Director 57"], ["storyline", "Storyline 57"], ["watched_on", "2022-03-21"], ["created_at", "2022-05-17 19:02:59.228319"], ["updated_at", "2022-05-17 19:02:59.228319"]]
+  [1m[35m (6.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 58"], ["director", "Director 58"], ["storyline", "Storyline 58"], ["watched_on", "2022-03-20"], ["created_at", "2022-05-17 19:02:59.236318"], ["updated_at", "2022-05-17 19:02:59.236318"]]
+  [1m[35m (10.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 59"], ["director", "Director 59"], ["storyline", "Storyline 59"], ["watched_on", "2022-03-19"], ["created_at", "2022-05-17 19:02:59.248010"], ["updated_at", "2022-05-17 19:02:59.248010"]]
+  [1m[35m (7.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 60"], ["director", "Director 60"], ["storyline", "Storyline 60"], ["watched_on", "2022-03-18"], ["created_at", "2022-05-17 19:02:59.258736"], ["updated_at", "2022-05-17 19:02:59.258736"]]
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 61"], ["director", "Director 61"], ["storyline", "Storyline 61"], ["watched_on", "2022-03-17"], ["created_at", "2022-05-17 19:02:59.266226"], ["updated_at", "2022-05-17 19:02:59.266226"]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 62"], ["director", "Director 62"], ["storyline", "Storyline 62"], ["watched_on", "2022-03-16"], ["created_at", "2022-05-17 19:02:59.271669"], ["updated_at", "2022-05-17 19:02:59.271669"]]
+  [1m[35m (8.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 63"], ["director", "Director 63"], ["storyline", "Storyline 63"], ["watched_on", "2022-03-15"], ["created_at", "2022-05-17 19:02:59.281175"], ["updated_at", "2022-05-17 19:02:59.281175"]]
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 64"], ["director", "Director 64"], ["storyline", "Storyline 64"], ["watched_on", "2022-03-14"], ["created_at", "2022-05-17 19:02:59.287172"], ["updated_at", "2022-05-17 19:02:59.287172"]]
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 65"], ["director", "Director 65"], ["storyline", "Storyline 65"], ["watched_on", "2022-03-13"], ["created_at", "2022-05-17 19:02:59.294423"], ["updated_at", "2022-05-17 19:02:59.294423"]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.9ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 66"], ["director", "Director 66"], ["storyline", "Storyline 66"], ["watched_on", "2022-03-12"], ["created_at", "2022-05-17 19:02:59.303448"], ["updated_at", "2022-05-17 19:02:59.303448"]]
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 67"], ["director", "Director 67"], ["storyline", "Storyline 67"], ["watched_on", "2022-03-11"], ["created_at", "2022-05-17 19:02:59.310618"], ["updated_at", "2022-05-17 19:02:59.310618"]]
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 68"], ["director", "Director 68"], ["storyline", "Storyline 68"], ["watched_on", "2022-03-10"], ["created_at", "2022-05-17 19:02:59.318261"], ["updated_at", "2022-05-17 19:02:59.318261"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 69"], ["director", "Director 69"], ["storyline", "Storyline 69"], ["watched_on", "2022-03-09"], ["created_at", "2022-05-17 19:02:59.333148"], ["updated_at", "2022-05-17 19:02:59.333148"]]
+  [1m[35m (6.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 70"], ["director", "Director 70"], ["storyline", "Storyline 70"], ["watched_on", "2022-03-08"], ["created_at", "2022-05-17 19:02:59.342713"], ["updated_at", "2022-05-17 19:02:59.342713"]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 71"], ["director", "Director 71"], ["storyline", "Storyline 71"], ["watched_on", "2022-03-07"], ["created_at", "2022-05-17 19:02:59.350506"], ["updated_at", "2022-05-17 19:02:59.350506"]]
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 72"], ["director", "Director 72"], ["storyline", "Storyline 72"], ["watched_on", "2022-03-06"], ["created_at", "2022-05-17 19:02:59.359807"], ["updated_at", "2022-05-17 19:02:59.359807"]]
+  [1m[35m (6.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 73"], ["director", "Director 73"], ["storyline", "Storyline 73"], ["watched_on", "2022-03-05"], ["created_at", "2022-05-17 19:02:59.367370"], ["updated_at", "2022-05-17 19:02:59.367370"]]
+  [1m[35m (10.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 74"], ["director", "Director 74"], ["storyline", "Storyline 74"], ["watched_on", "2022-03-04"], ["created_at", "2022-05-17 19:02:59.378990"], ["updated_at", "2022-05-17 19:02:59.378990"]]
+  [1m[35m (6.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 75"], ["director", "Director 75"], ["storyline", "Storyline 75"], ["watched_on", "2022-03-03"], ["created_at", "2022-05-17 19:02:59.386829"], ["updated_at", "2022-05-17 19:02:59.386829"]]
+  [1m[35m (8.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 76"], ["director", "Director 76"], ["storyline", "Storyline 76"], ["watched_on", "2022-03-02"], ["created_at", "2022-05-17 19:02:59.396842"], ["updated_at", "2022-05-17 19:02:59.396842"]]
+  [1m[35m (7.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 77"], ["director", "Director 77"], ["storyline", "Storyline 77"], ["watched_on", "2022-03-01"], ["created_at", "2022-05-17 19:02:59.405921"], ["updated_at", "2022-05-17 19:02:59.405921"]]
+  [1m[35m (7.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 78"], ["director", "Director 78"], ["storyline", "Storyline 78"], ["watched_on", "2022-02-28"], ["created_at", "2022-05-17 19:02:59.414611"], ["updated_at", "2022-05-17 19:02:59.414611"]]
+  [1m[35m (7.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 79"], ["director", "Director 79"], ["storyline", "Storyline 79"], ["watched_on", "2022-02-27"], ["created_at", "2022-05-17 19:02:59.422764"], ["updated_at", "2022-05-17 19:02:59.422764"]]
+  [1m[35m (6.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 80"], ["director", "Director 80"], ["storyline", "Storyline 80"], ["watched_on", "2022-02-26"], ["created_at", "2022-05-17 19:02:59.430307"], ["updated_at", "2022-05-17 19:02:59.430307"]]
+  [1m[35m (8.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 81"], ["director", "Director 81"], ["storyline", "Storyline 81"], ["watched_on", "2022-02-25"], ["created_at", "2022-05-17 19:02:59.440271"], ["updated_at", "2022-05-17 19:02:59.440271"]]
+  [1m[35m (6.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 82"], ["director", "Director 82"], ["storyline", "Storyline 82"], ["watched_on", "2022-02-24"], ["created_at", "2022-05-17 19:02:59.449002"], ["updated_at", "2022-05-17 19:02:59.449002"]]
+  [1m[35m (6.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 83"], ["director", "Director 83"], ["storyline", "Storyline 83"], ["watched_on", "2022-02-23"], ["created_at", "2022-05-17 19:02:59.458208"], ["updated_at", "2022-05-17 19:02:59.458208"]]
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 84"], ["director", "Director 84"], ["storyline", "Storyline 84"], ["watched_on", "2022-02-22"], ["created_at", "2022-05-17 19:02:59.466928"], ["updated_at", "2022-05-17 19:02:59.466928"]]
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 85"], ["director", "Director 85"], ["storyline", "Storyline 85"], ["watched_on", "2022-02-21"], ["created_at", "2022-05-17 19:02:59.474278"], ["updated_at", "2022-05-17 19:02:59.474278"]]
+  [1m[35m (8.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 86"], ["director", "Director 86"], ["storyline", "Storyline 86"], ["watched_on", "2022-02-20"], ["created_at", "2022-05-17 19:02:59.483984"], ["updated_at", "2022-05-17 19:02:59.483984"]]
+  [1m[35m (5.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 87"], ["director", "Director 87"], ["storyline", "Storyline 87"], ["watched_on", "2022-02-19"], ["created_at", "2022-05-17 19:02:59.490874"], ["updated_at", "2022-05-17 19:02:59.490874"]]
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 88"], ["director", "Director 88"], ["storyline", "Storyline 88"], ["watched_on", "2022-02-18"], ["created_at", "2022-05-17 19:02:59.500117"], ["updated_at", "2022-05-17 19:02:59.500117"]]
+  [1m[35m (5.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 89"], ["director", "Director 89"], ["storyline", "Storyline 89"], ["watched_on", "2022-02-17"], ["created_at", "2022-05-17 19:02:59.507052"], ["updated_at", "2022-05-17 19:02:59.507052"]]
+  [1m[35m (8.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 90"], ["director", "Director 90"], ["storyline", "Storyline 90"], ["watched_on", "2022-02-16"], ["created_at", "2022-05-17 19:02:59.517056"], ["updated_at", "2022-05-17 19:02:59.517056"]]
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 91"], ["director", "Director 91"], ["storyline", "Storyline 91"], ["watched_on", "2022-02-15"], ["created_at", "2022-05-17 19:02:59.522908"], ["updated_at", "2022-05-17 19:02:59.522908"]]
+  [1m[35m (8.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 92"], ["director", "Director 92"], ["storyline", "Storyline 92"], ["watched_on", "2022-02-14"], ["created_at", "2022-05-17 19:02:59.532825"], ["updated_at", "2022-05-17 19:02:59.532825"]]
+  [1m[35m (7.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 93"], ["director", "Director 93"], ["storyline", "Storyline 93"], ["watched_on", "2022-02-13"], ["created_at", "2022-05-17 19:02:59.542257"], ["updated_at", "2022-05-17 19:02:59.542257"]]
+  [1m[35m (6.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 94"], ["director", "Director 94"], ["storyline", "Storyline 94"], ["watched_on", "2022-02-12"], ["created_at", "2022-05-17 19:02:59.551422"], ["updated_at", "2022-05-17 19:02:59.551422"]]
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 95"], ["director", "Director 95"], ["storyline", "Storyline 95"], ["watched_on", "2022-02-11"], ["created_at", "2022-05-17 19:02:59.558519"], ["updated_at", "2022-05-17 19:02:59.558519"]]
+  [1m[35m (8.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 96"], ["director", "Director 96"], ["storyline", "Storyline 96"], ["watched_on", "2022-02-10"], ["created_at", "2022-05-17 19:02:59.568028"], ["updated_at", "2022-05-17 19:02:59.568028"]]
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 97"], ["director", "Director 97"], ["storyline", "Storyline 97"], ["watched_on", "2022-02-09"], ["created_at", "2022-05-17 19:02:59.574419"], ["updated_at", "2022-05-17 19:02:59.574419"]]
+  [1m[35m (14.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 98"], ["director", "Director 98"], ["storyline", "Storyline 98"], ["watched_on", "2022-02-08"], ["created_at", "2022-05-17 19:02:59.589936"], ["updated_at", "2022-05-17 19:02:59.589936"]]
+  [1m[35m (6.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Title 99"], ["director", "Director 99"], ["storyline", "Storyline 99"], ["watched_on", "2022-02-07"], ["created_at", "2022-05-17 19:02:59.598842"], ["updated_at", "2022-05-17 19:02:59.598842"]]
+  [1m[35m (15.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "movies"[0m
+  [1m[36mMovie Load (0.1ms)[0m  [1m[34mSELECT  "movies"."title", "movies"."director", "movies"."storyline" FROM "movies" ORDER BY "movies"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.1ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Repellat perspiciatis quia"], ["director", "Nancy Zieme"], ["storyline", "Dolores ab hic. Unde ut explicabo. Ut nam corporis."], ["watched_on", "2022-01-23"], ["created_at", "2022-05-17 19:04:23.812807"], ["updated_at", "2022-05-17 19:04:23.812807"]]
+  [1m[35m (14.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Eum sed ut"], ["director", "Carolann Feil DDS"], ["storyline", "Est sit ipsam. Alias est assumenda. Aspernatur ut debitis."], ["watched_on", "2022-03-10"], ["created_at", "2022-05-17 19:04:23.835698"], ["updated_at", "2022-05-17 19:04:23.835698"]]
+  [1m[35m (7.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Impedit aliquid commodi"], ["director", "Mr. Sherill Crist"], ["storyline", "Dolores illum assumenda. Nobis tenetur suscipit. Laboriosam voluptates omnis."], ["watched_on", "2022-01-31"], ["created_at", "2022-05-17 19:04:23.846445"], ["updated_at", "2022-05-17 19:04:23.846445"]]
+  [1m[35m (6.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Fugit in est"], ["director", "Rafael Cruickshank"], ["storyline", "Reprehenderit est nobis. Officiis quia ut. Fuga veniam perspiciatis."], ["watched_on", "2022-01-21"], ["created_at", "2022-05-17 19:04:23.855913"], ["updated_at", "2022-05-17 19:04:23.855913"]]
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Eaque labore ex"], ["director", "Clyde Balistreri"], ["storyline", "Dolor esse enim. Harum iusto minus. Cupiditate aut animi."], ["watched_on", "2022-04-27"], ["created_at", "2022-05-17 19:04:23.864564"], ["updated_at", "2022-05-17 19:04:23.864564"]]
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Cupiditate sunt ab"], ["director", "Bart Homenick"], ["storyline", "Assumenda molestiae culpa. Doloribus cum quos. Itaque distinctio molestiae."], ["watched_on", "2022-04-16"], ["created_at", "2022-05-17 19:04:23.876013"], ["updated_at", "2022-05-17 19:04:23.876013"]]
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Quisquam officiis nisi"], ["director", "Danial Medhurst"], ["storyline", "Ad voluptatibus eum. Id maiores tempora. Et adipisci sint."], ["watched_on", "2022-02-08"], ["created_at", "2022-05-17 19:04:23.885251"], ["updated_at", "2022-05-17 19:04:23.885251"]]
+  [1m[35m (6.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Voluptas omnis itaque"], ["director", "Mr. Ruthann Welch"], ["storyline", "Nostrum quibusdam similique. Dolorem sint numquam. Et quo voluptatibus."], ["watched_on", "2022-02-12"], ["created_at", "2022-05-17 19:04:23.897317"], ["updated_at", "2022-05-17 19:04:23.897317"]]
+  [1m[35m (6.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Ducimus tenetur dicta"], ["director", "Mercy Rowe"], ["storyline", "Delectus minus nesciunt. Quae et vel. Dicta consequuntur quos."], ["watched_on", "2022-02-10"], ["created_at", "2022-05-17 19:04:23.908768"], ["updated_at", "2022-05-17 19:04:23.908768"]]
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Nostrum repellat maiores"], ["director", "Harley Considine"], ["storyline", "Molestias amet ea. Dolor magnam fugit. Molestiae pariatur maxime."], ["watched_on", "2022-03-02"], ["created_at", "2022-05-17 19:04:23.920205"], ["updated_at", "2022-05-17 19:04:23.920205"]]
+  [1m[35m (7.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Ut quam neque"], ["director", "Leo Shanahan"], ["storyline", "Consequatur ex iste. Laborum praesentium repudiandae. Itaque est eum."], ["watched_on", "2022-03-25"], ["created_at", "2022-05-17 19:04:23.932670"], ["updated_at", "2022-05-17 19:04:23.932670"]]
+  [1m[35m (4.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Molestias et eum"], ["director", "Rev. Loma Effertz"], ["storyline", "Quia minima at. Sequi sit vero. Quia officiis veniam."], ["watched_on", "2022-04-20"], ["created_at", "2022-05-17 19:04:23.943834"], ["updated_at", "2022-05-17 19:04:23.943834"]]
+  [1m[35m (7.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Omnis eos est"], ["director", "Emerson Goyette"], ["storyline", "Fugiat dolorem qui. Non delectus doloribus. Error dolores enim."], ["watched_on", "2022-04-14"], ["created_at", "2022-05-17 19:04:23.956056"], ["updated_at", "2022-05-17 19:04:23.956056"]]
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Quibusdam voluptatem aut"], ["director", "Felipe Ratke"], ["storyline", "Earum eum iure. Nihil dolorum voluptas. Doloribus ut cum."], ["watched_on", "2022-01-17"], ["created_at", "2022-05-17 19:04:23.965114"], ["updated_at", "2022-05-17 19:04:23.965114"]]
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Exercitationem vitae fuga"], ["director", "Rolande Jakubowski"], ["storyline", "Qui consequuntur perferendis. Et et laudantium. Nisi nihil ab."], ["watched_on", "2022-02-24"], ["created_at", "2022-05-17 19:04:23.975279"], ["updated_at", "2022-05-17 19:04:23.975279"]]
+  [1m[35m (6.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Quasi sunt voluptatem"], ["director", "Mrs. Aldo Prohaska"], ["storyline", "Maiores voluptatem pariatur. Neque non sint. Atque sed illum."], ["watched_on", "2022-03-28"], ["created_at", "2022-05-17 19:04:23.984287"], ["updated_at", "2022-05-17 19:04:23.984287"]]
+  [1m[35m (7.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Aperiam voluptatem tempore"], ["director", "Izola Jenkins"], ["storyline", "Tempore laudantium consequatur. Magni nemo rerum. Dolor magnam odio."], ["watched_on", "2022-02-15"], ["created_at", "2022-05-17 19:04:23.994546"], ["updated_at", "2022-05-17 19:04:23.994546"]]
+  [1m[35m (6.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Omnis quidem dolores"], ["director", "Mrs. Gil Wolff"], ["storyline", "Est tempore ut. Corrupti et magni. Consequatur laudantium recusandae."], ["watched_on", "2022-03-09"], ["created_at", "2022-05-17 19:04:24.004424"], ["updated_at", "2022-05-17 19:04:24.004424"]]
+  [1m[35m (5.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (5.4ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Natus atque ut"], ["director", "Xochitl Langworth"], ["storyline", "Aut nostrum pariatur. Vel nemo harum. Est excepturi laboriosam."], ["watched_on", "2022-02-02"], ["created_at", "2022-05-17 19:04:24.012790"], ["updated_at", "2022-05-17 19:04:24.012790"]]
+  [1m[35m (5.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Error dolorem quod"], ["director", "Wen Reichert"], ["storyline", "Officiis debitis sed. Occaecati nihil sed. Aliquam cupiditate delectus."], ["watched_on", "2022-04-23"], ["created_at", "2022-05-17 19:04:24.027050"], ["updated_at", "2022-05-17 19:04:24.027050"]]
+  [1m[35m (6.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.9ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Illo dolorum adipisci"], ["director", "Luann Cruickshank"], ["storyline", "Id est maiores. Ad eligendi accusamus. Velit accusamus aut."], ["watched_on", "2022-04-22"], ["created_at", "2022-05-17 19:04:24.039707"], ["updated_at", "2022-05-17 19:04:24.039707"]]
+  [1m[35m (5.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Cupiditate in esse"], ["director", "Gregg Rohan"], ["storyline", "Nulla accusamus laboriosam. Sunt non sed. Porro praesentium iste."], ["watched_on", "2022-03-26"], ["created_at", "2022-05-17 19:04:24.051104"], ["updated_at", "2022-05-17 19:04:24.051104"]]
+  [1m[35m (7.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Voluptatem non optio"], ["director", "Filiberto Torp"], ["storyline", "Error ullam voluptates. Et quos vero. Est distinctio in."], ["watched_on", "2022-03-05"], ["created_at", "2022-05-17 19:04:24.063131"], ["updated_at", "2022-05-17 19:04:24.063131"]]
+  [1m[35m (7.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Atque impedit reiciendis"], ["director", "Gerard Zboncak DVM"], ["storyline", "Illum veniam tempore. Ipsam voluptas vel. Facilis nisi molestias."], ["watched_on", "2022-02-26"], ["created_at", "2022-05-17 19:04:24.074940"], ["updated_at", "2022-05-17 19:04:24.074940"]]
+  [1m[35m (6.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Et sed illum"], ["director", "Sen. Kimberly McGlynn"], ["storyline", "Magni sed quia. Velit aliquam dolor. Consequatur minima eligendi."], ["watched_on", "2022-04-08"], ["created_at", "2022-05-17 19:04:24.084440"], ["updated_at", "2022-05-17 19:04:24.084440"]]
+  [1m[35m (5.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Perspiciatis ut quidem"], ["director", "Irmgard Bahringer"], ["storyline", "Quaerat fugit modi. Eum alias adipisci. Natus doloribus accusamus."], ["watched_on", "2022-02-10"], ["created_at", "2022-05-17 19:04:24.093067"], ["updated_at", "2022-05-17 19:04:24.093067"]]
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Aut sed sapiente"], ["director", "Walton Ebert"], ["storyline", "Ut blanditiis vel. Quisquam omnis sint. Aut porro non."], ["watched_on", "2022-05-05"], ["created_at", "2022-05-17 19:04:24.136439"], ["updated_at", "2022-05-17 19:04:24.136439"]]
+  [1m[35m (4.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Cumque molestiae at"], ["director", "Rosanne Luettgen"], ["storyline", "Quibusdam voluptatem laborum. Sed optio nemo. Non tenetur repudiandae."], ["watched_on", "2022-04-25"], ["created_at", "2022-05-17 19:04:24.147440"], ["updated_at", "2022-05-17 19:04:24.147440"]]
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Aperiam asperiores minima"], ["director", "Susanna Cole"], ["storyline", "Ullam excepturi ut. Eum iste fugiat. Deserunt aliquid vel."], ["watched_on", "2022-03-20"], ["created_at", "2022-05-17 19:04:24.156990"], ["updated_at", "2022-05-17 19:04:24.156990"]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Molestiae et rerum"], ["director", "Ivonne Crooks PhD"], ["storyline", "Sed nobis minus. Impedit id ad. Molestiae voluptatem magnam."], ["watched_on", "2022-05-02"], ["created_at", "2022-05-17 19:04:24.167403"], ["updated_at", "2022-05-17 19:04:24.167403"]]
+  [1m[35m (6.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Rerum harum omnis"], ["director", "Milagro Quigley"], ["storyline", "Dolor ullam natus. Est in sit. Est quis soluta."], ["watched_on", "2022-01-22"], ["created_at", "2022-05-17 19:04:24.176283"], ["updated_at", "2022-05-17 19:04:24.176283"]]
+  [1m[35m (8.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Beatae odit voluptatem"], ["director", "Jonathan Schuster"], ["storyline", "Voluptate et nihil. Facere sequi illum. Eos eligendi natus."], ["watched_on", "2022-04-28"], ["created_at", "2022-05-17 19:04:24.187067"], ["updated_at", "2022-05-17 19:04:24.187067"]]
+  [1m[35m (5.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Molestiae laboriosam expedita"], ["director", "Freddie Gorczany"], ["storyline", "Asperiores non magni. Accusantium molestias molestiae. Omnis fuga modi."], ["watched_on", "2022-01-31"], ["created_at", "2022-05-17 19:04:24.195829"], ["updated_at", "2022-05-17 19:04:24.195829"]]
+  [1m[35m (6.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Amet dolores ab"], ["director", "Prof. Masako Goldner"], ["storyline", "Est ut cumque. Vero modi fugit. Asperiores natus voluptas."], ["watched_on", "2022-03-12"], ["created_at", "2022-05-17 19:04:24.205347"], ["updated_at", "2022-05-17 19:04:24.205347"]]
+  [1m[35m (6.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (3.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Iusto eveniet nobis"], ["director", "Randy Waters CPA"], ["storyline", "Doloremque unde illum. Iure esse maiores. Voluptatem a omnis."], ["watched_on", "2022-02-19"], ["created_at", "2022-05-17 19:04:24.218414"], ["updated_at", "2022-05-17 19:04:24.218414"]]
+  [1m[35m (9.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Animi sint sapiente"], ["director", "Marcel West"], ["storyline", "Et nesciunt sint. Dolorem quis impedit. Voluptates corporis aut."], ["watched_on", "2022-03-30"], ["created_at", "2022-05-17 19:04:24.235856"], ["updated_at", "2022-05-17 19:04:24.235856"]]
+  [1m[35m (8.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.3ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Cum esse non"], ["director", "Gladys Russel Esq."], ["storyline", "Ut quidem nemo. Ut praesentium magnam. Magni reprehenderit est."], ["watched_on", "2022-04-08"], ["created_at", "2022-05-17 19:04:24.248768"], ["updated_at", "2022-05-17 19:04:24.248768"]]
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Assumenda incidunt eaque"], ["director", "Bradford Reichel"], ["storyline", "Quaerat corrupti et. Perspiciatis et laborum. Aut consectetur ipsa."], ["watched_on", "2022-01-19"], ["created_at", "2022-05-17 19:04:24.259684"], ["updated_at", "2022-05-17 19:04:24.259684"]]
+  [1m[35m (4.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Est dolorum optio"], ["director", "Olin Rath"], ["storyline", "Quod blanditiis porro. Et et nemo. Quasi blanditiis molestias."], ["watched_on", "2022-03-24"], ["created_at", "2022-05-17 19:04:24.267954"], ["updated_at", "2022-05-17 19:04:24.267954"]]
+  [1m[35m (10.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Ipsam eum accusamus"], ["director", "Donnell Ortiz DVM"], ["storyline", "Sit quia in. Qui sed dolorem. Nemo quos et."], ["watched_on", "2022-03-03"], ["created_at", "2022-05-17 19:04:24.280921"], ["updated_at", "2022-05-17 19:04:24.280921"]]
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Dolor ratione quisquam"], ["director", "Shon Schaefer DO"], ["storyline", "Vero explicabo a. Maiores excepturi ut. Sint sed est."], ["watched_on", "2022-01-25"], ["created_at", "2022-05-17 19:04:24.292163"], ["updated_at", "2022-05-17 19:04:24.292163"]]
+  [1m[35m (6.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Eos nostrum aut"], ["director", "Jammie Williamson"], ["storyline", "Quia ipsa rerum. Sunt molestias et. Quos suscipit perferendis."], ["watched_on", "2022-03-29"], ["created_at", "2022-05-17 19:04:24.304341"], ["updated_at", "2022-05-17 19:04:24.304341"]]
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Dolor asperiores fugit"], ["director", "Gov. Troy Wisozk"], ["storyline", "Aut corporis optio. Reprehenderit ut facere. Molestiae doloremque tempora."], ["watched_on", "2022-02-13"], ["created_at", "2022-05-17 19:04:24.312448"], ["updated_at", "2022-05-17 19:04:24.312448"]]
+  [1m[35m (6.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Excepturi eum quia"], ["director", "Chad Reilly"], ["storyline", "Enim dignissimos voluptate. Et ad distinctio. Deserunt officia iste."], ["watched_on", "2022-03-02"], ["created_at", "2022-05-17 19:04:24.323544"], ["updated_at", "2022-05-17 19:04:24.323544"]]
+  [1m[35m (4.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Totam ratione possimus"], ["director", "Jacques Connelly"], ["storyline", "Quas vel non. Possimus a cum. Accusamus voluptatem labore."], ["watched_on", "2022-02-18"], ["created_at", "2022-05-17 19:04:24.332118"], ["updated_at", "2022-05-17 19:04:24.332118"]]
+  [1m[35m (5.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Beatae corrupti mollitia"], ["director", "Pres. Jeffry Bernhard"], ["storyline", "Et possimus dolorum. Labore eius dolor. Voluptatum doloribus necessitatibus."], ["watched_on", "2022-04-27"], ["created_at", "2022-05-17 19:04:24.342269"], ["updated_at", "2022-05-17 19:04:24.342269"]]
+  [1m[35m (7.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Fugit praesentium quia"], ["director", "Marty Lindgren"], ["storyline", "Est numquam incidunt. Totam velit voluptatem. Mollitia exercitationem harum."], ["watched_on", "2022-05-10"], ["created_at", "2022-05-17 19:04:24.353380"], ["updated_at", "2022-05-17 19:04:24.353380"]]
+  [1m[35m (5.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Aperiam culpa autem"], ["director", "Tish Howe"], ["storyline", "Natus aut tempora. Cum et vel. Itaque magni ut."], ["watched_on", "2022-03-15"], ["created_at", "2022-05-17 19:04:24.364032"], ["updated_at", "2022-05-17 19:04:24.364032"]]
+  [1m[35m (6.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Assumenda iure ipsum"], ["director", "Clint Leuschke"], ["storyline", "Velit blanditiis et. Tempora porro laudantium. Ab sequi sint."], ["watched_on", "2022-01-25"], ["created_at", "2022-05-17 19:04:24.375369"], ["updated_at", "2022-05-17 19:04:24.375369"]]
+  [1m[35m (6.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Assumenda optio delectus"], ["director", "Stacie Gorczany VM"], ["storyline", "Et recusandae non. Culpa et fuga. Temporibus ut saepe."], ["watched_on", "2022-02-10"], ["created_at", "2022-05-17 19:04:24.386827"], ["updated_at", "2022-05-17 19:04:24.386827"]]
+  [1m[35m (7.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Quod facere tempore"], ["director", "Roland Block"], ["storyline", "Est dolores velit. Adipisci similique quae. Animi est quod."], ["watched_on", "2022-03-31"], ["created_at", "2022-05-17 19:04:24.397218"], ["updated_at", "2022-05-17 19:04:24.397218"]]
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Tempora hic voluptatem"], ["director", "Kacy Kulas"], ["storyline", "Soluta rerum amet. Facilis reiciendis modi. Eum amet dicta."], ["watched_on", "2022-04-23"], ["created_at", "2022-05-17 19:04:24.407899"], ["updated_at", "2022-05-17 19:04:24.407899"]]
+  [1m[35m (6.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Autem saepe illo"], ["director", "Miss Humberto Walter"], ["storyline", "Eveniet officia officiis. Sit fuga dignissimos. Aut quisquam aliquid."], ["watched_on", "2022-03-10"], ["created_at", "2022-05-17 19:04:24.419240"], ["updated_at", "2022-05-17 19:04:24.419240"]]
+  [1m[35m (5.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Ad ipsum perferendis"], ["director", "Tressie McDermott"], ["storyline", "Ut impedit nulla. Ut ipsa eos. Tempora earum facere."], ["watched_on", "2022-02-02"], ["created_at", "2022-05-17 19:04:24.428244"], ["updated_at", "2022-05-17 19:04:24.428244"]]
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Nostrum animi id"], ["director", "Edison Breitenberg Jr."], ["storyline", "Voluptatem voluptatem aut. Dolorem qui architecto. Et et sint."], ["watched_on", "2022-01-28"], ["created_at", "2022-05-17 19:04:24.435572"], ["updated_at", "2022-05-17 19:04:24.435572"]]
+  [1m[35m (8.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Laborum repellat excepturi"], ["director", "Trevor Heller I"], ["storyline", "Laudantium dolorum quia. Quas voluptatum nemo. Nulla suscipit ipsam."], ["watched_on", "2022-04-03"], ["created_at", "2022-05-17 19:04:24.446981"], ["updated_at", "2022-05-17 19:04:24.446981"]]
+  [1m[35m (10.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Quidem laudantium adipisci"], ["director", "Juana Wisoky"], ["storyline", "Molestiae vitae illo. Ex facere asperiores. Neque eum qui."], ["watched_on", "2022-05-02"], ["created_at", "2022-05-17 19:04:24.460841"], ["updated_at", "2022-05-17 19:04:24.460841"]]
+  [1m[35m (7.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Illum non nostrum"], ["director", "Kurtis Jacobs"], ["storyline", "Et ipsam autem. Perspiciatis omnis eveniet. Molestias voluptatem natus."], ["watched_on", "2022-03-02"], ["created_at", "2022-05-17 19:04:24.473036"], ["updated_at", "2022-05-17 19:04:24.473036"]]
+  [1m[35m (12.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Est sunt in"], ["director", "The Hon. Fred Emard"], ["storyline", "Aliquid repellendus quisquam. Excepturi soluta in. Aut doloribus nihil."], ["watched_on", "2022-02-17"], ["created_at", "2022-05-17 19:04:24.491988"], ["updated_at", "2022-05-17 19:04:24.491988"]]
+  [1m[35m (10.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Perferendis et nesciunt"], ["director", "Evangeline Thompson"], ["storyline", "Voluptatem alias sit. Recusandae rerum sit. Voluptas enim voluptas."], ["watched_on", "2022-01-24"], ["created_at", "2022-05-17 19:04:24.505451"], ["updated_at", "2022-05-17 19:04:24.505451"]]
+  [1m[35m (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Accusamus minima sed"], ["director", "Loida Powlowski"], ["storyline", "Fugiat voluptas ut. Totam ab eius. Ea ipsam odit."], ["watched_on", "2022-01-31"], ["created_at", "2022-05-17 19:04:24.513125"], ["updated_at", "2022-05-17 19:04:24.513125"]]
+  [1m[35m (6.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Est expedita consequuntur"], ["director", "Tiana Ullrich"], ["storyline", "Eum occaecati eaque. Sit vitae ab. Labore molestiae praesentium."], ["watched_on", "2022-02-04"], ["created_at", "2022-05-17 19:04:24.524384"], ["updated_at", "2022-05-17 19:04:24.524384"]]
+  [1m[35m (6.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Rerum deserunt vel"], ["director", "Pres. Ha Beatty"], ["storyline", "Aut tempora sint. Minima odio corporis. Quo laboriosam est."], ["watched_on", "2022-02-17"], ["created_at", "2022-05-17 19:04:24.535571"], ["updated_at", "2022-05-17 19:04:24.535571"]]
+  [1m[35m (13.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Fuga ex sunt"], ["director", "Jamie Effertz"], ["storyline", "Natus neque laborum. Sit consectetur aliquam. Provident fugiat est."], ["watched_on", "2022-02-19"], ["created_at", "2022-05-17 19:04:24.552909"], ["updated_at", "2022-05-17 19:04:24.552909"]]
+  [1m[35m (5.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (14.7ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Totam sapiente aut"], ["director", "Dave Ullrich"], ["storyline", "Accusantium nobis veniam. Ipsa ut modi. Necessitatibus praesentium et."], ["watched_on", "2022-04-23"], ["created_at", "2022-05-17 19:04:24.584798"], ["updated_at", "2022-05-17 19:04:24.584798"]]
+  [1m[35m (6.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (7.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Ea ut tempora"], ["director", "Alix Wyman"], ["storyline", "Non quia eum. Consequatur in vel. Perferendis est nisi."], ["watched_on", "2022-03-02"], ["created_at", "2022-05-17 19:04:24.610150"], ["updated_at", "2022-05-17 19:04:24.610150"]]
+  [1m[35m (14.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Omnis repudiandae praesentium"], ["director", "Fabian Flatley"], ["storyline", "Et voluptas fuga. Rerum voluptatem voluptate. Est maiores et."], ["watched_on", "2022-04-29"], ["created_at", "2022-05-17 19:04:24.635499"], ["updated_at", "2022-05-17 19:04:24.635499"]]
+  [1m[35m (19.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.4ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Unde dolorem tenetur"], ["director", "Michele Moore Sr."], ["storyline", "Maxime consequatur odit. Molestiae ut molestiae. Eveniet quibusdam rerum."], ["watched_on", "2022-03-21"], ["created_at", "2022-05-17 19:04:24.657348"], ["updated_at", "2022-05-17 19:04:24.657348"]]
+  [1m[35m (6.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Corporis debitis non"], ["director", "Lenny Quigley"], ["storyline", "Officiis est dignissimos. Architecto et laborum. Rerum debitis adipisci."], ["watched_on", "2022-04-09"], ["created_at", "2022-05-17 19:04:24.671786"], ["updated_at", "2022-05-17 19:04:24.671786"]]
+  [1m[35m (5.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Ut nam dolores"], ["director", "Eugene Fritsch"], ["storyline", "Sint cum esse. Dolorum a dolorem. Esse laboriosam similique."], ["watched_on", "2022-02-23"], ["created_at", "2022-05-17 19:04:24.679711"], ["updated_at", "2022-05-17 19:04:24.679711"]]
+  [1m[35m (8.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Deserunt dolorem nobis"], ["director", "Phebe Franecki"], ["storyline", "Modi non unde. Aut reiciendis fuga. Quis enim quibusdam."], ["watched_on", "2022-03-30"], ["created_at", "2022-05-17 19:04:24.690426"], ["updated_at", "2022-05-17 19:04:24.690426"]]
+  [1m[35m (7.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Enim consequatur perferendis"], ["director", "The Hon. Zola Sawayn"], ["storyline", "Et aperiam unde. Aut repellendus consequatur. Quidem neque quia."], ["watched_on", "2022-02-26"], ["created_at", "2022-05-17 19:04:24.702230"], ["updated_at", "2022-05-17 19:04:24.702230"]]
+  [1m[35m (7.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Voluptatem ipsam ea"], ["director", "Brain Herzog"], ["storyline", "Eum doloribus sed. Quaerat soluta impedit. Nam tempora quod."], ["watched_on", "2022-01-28"], ["created_at", "2022-05-17 19:04:24.715560"], ["updated_at", "2022-05-17 19:04:24.715560"]]
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Aspernatur asperiores omnis"], ["director", "Bryon Parker"], ["storyline", "Est adipisci aut. Explicabo laudantium accusamus. Nisi nobis totam."], ["watched_on", "2022-04-01"], ["created_at", "2022-05-17 19:04:24.728063"], ["updated_at", "2022-05-17 19:04:24.728063"]]
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Voluptatibus vero esse"], ["director", "Marylee Hahn"], ["storyline", "Dicta sequi laudantium. Blanditiis aperiam est. Nisi excepturi quibusdam."], ["watched_on", "2022-03-13"], ["created_at", "2022-05-17 19:04:24.737352"], ["updated_at", "2022-05-17 19:04:24.737352"]]
+  [1m[35m (12.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Suscipit perferendis est"], ["director", "Rev. Courtney Boyer"], ["storyline", "Aut fuga qui. Voluptas sit sequi. Hic sint omnis."], ["watched_on", "2022-04-04"], ["created_at", "2022-05-17 19:04:24.755025"], ["updated_at", "2022-05-17 19:04:24.755025"]]
+  [1m[35m (5.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (4.0ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Atque amet qui"], ["director", "Jefferey Schulist"], ["storyline", "Pariatur error reiciendis. Dicta vel repudiandae. Aut ipsa et."], ["watched_on", "2022-04-11"], ["created_at", "2022-05-17 19:04:24.793464"], ["updated_at", "2022-05-17 19:04:24.793464"]]
+  [1m[35m (11.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Ipsam debitis a"], ["director", "Emanuel Mann"], ["storyline", "Eos nemo quam. Dolore laudantium non. Et aut unde."], ["watched_on", "2022-03-10"], ["created_at", "2022-05-17 19:04:24.812159"], ["updated_at", "2022-05-17 19:04:24.812159"]]
+  [1m[35m (8.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Officiis qui unde"], ["director", "Larissa Zulauf"], ["storyline", "Dolor placeat rem. Dicta quo repellendus. Quod voluptatem reiciendis."], ["watched_on", "2022-03-23"], ["created_at", "2022-05-17 19:04:24.823483"], ["updated_at", "2022-05-17 19:04:24.823483"]]
+  [1m[35m (6.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Amet maxime neque"], ["director", "Dominic Robel II"], ["storyline", "Iusto odit harum. Est qui non. Consequatur voluptas sunt."], ["watched_on", "2022-01-21"], ["created_at", "2022-05-17 19:04:24.837954"], ["updated_at", "2022-05-17 19:04:24.837954"]]
+  [1m[35m (4.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Facere quia placeat"], ["director", "Adah Spencer"], ["storyline", "Omnis soluta accusamus. Vitae mollitia cum. Fugiat et voluptatem."], ["watched_on", "2022-02-07"], ["created_at", "2022-05-17 19:04:24.847701"], ["updated_at", "2022-05-17 19:04:24.847701"]]
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Autem qui ut"], ["director", "Kenneth Cole"], ["storyline", "Perspiciatis dolorem deserunt. Earum quae qui. Asperiores ut alias."], ["watched_on", "2022-04-22"], ["created_at", "2022-05-17 19:04:24.859040"], ["updated_at", "2022-05-17 19:04:24.859040"]]
+  [1m[35m (6.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Velit et quod"], ["director", "Rev. Otilia O'Connell"], ["storyline", "Deleniti nihil tenetur. Vero quis dolorem. Ea nihil id."], ["watched_on", "2022-01-20"], ["created_at", "2022-05-17 19:04:24.869058"], ["updated_at", "2022-05-17 19:04:24.869058"]]
+  [1m[35m (6.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Perferendis impedit recusandae"], ["director", "Prof. Megan Brekke"], ["storyline", "Id sequi ut. Consequatur necessitatibus nihil. Dolorem non aut."], ["watched_on", "2022-02-27"], ["created_at", "2022-05-17 19:04:24.880647"], ["updated_at", "2022-05-17 19:04:24.880647"]]
+  [1m[35m (6.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Ea ut vel"], ["director", "Bryon Towne"], ["storyline", "Voluptatum ipsum iusto. Autem ut incidunt. Sunt qui deleniti."], ["watched_on", "2022-03-30"], ["created_at", "2022-05-17 19:04:24.891395"], ["updated_at", "2022-05-17 19:04:24.891395"]]
+  [1m[35m (7.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Possimus quidem voluptas"], ["director", "Hector Nienow"], ["storyline", "Quis culpa dolores. Non enim nostrum. Quidem omnis doloribus."], ["watched_on", "2022-01-30"], ["created_at", "2022-05-17 19:04:24.901191"], ["updated_at", "2022-05-17 19:04:24.901191"]]
+  [1m[35m (5.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Consectetur ut laudantium"], ["director", "Lawerence O'Kon"], ["storyline", "Illo voluptas distinctio. Sit voluptatibus omnis. Aut dolores illum."], ["watched_on", "2022-04-06"], ["created_at", "2022-05-17 19:04:24.911752"], ["updated_at", "2022-05-17 19:04:24.911752"]]
+  [1m[35m (6.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Unde explicabo ut"], ["director", "Stefan Stiedemann"], ["storyline", "Debitis rem facilis. Nihil veritatis est. Aperiam cum consequatur."], ["watched_on", "2022-03-25"], ["created_at", "2022-05-17 19:04:24.921156"], ["updated_at", "2022-05-17 19:04:24.921156"]]
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.3ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Sit veniam temporibus"], ["director", "Treena DuBuque"], ["storyline", "Atque porro voluptas. Nihil deserunt enim. Laboriosam ducimus quo."], ["watched_on", "2022-05-01"], ["created_at", "2022-05-17 19:04:24.932743"], ["updated_at", "2022-05-17 19:04:24.932743"]]
+  [1m[35m (5.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Voluptatum et labore"], ["director", "Jaleesa Kozey"], ["storyline", "Praesentium eaque nemo. Neque et quaerat. Non est eius."], ["watched_on", "2022-04-24"], ["created_at", "2022-05-17 19:04:24.943409"], ["updated_at", "2022-05-17 19:04:24.943409"]]
+  [1m[35m (14.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (2.4ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Voluptatem omnis quam"], ["director", "Prof. Neda O'Hara"], ["storyline", "Veritatis voluptate sequi. Aliquam adipisci illum. Rerum sequi quisquam."], ["watched_on", "2022-02-16"], ["created_at", "2022-05-17 19:04:24.960348"], ["updated_at", "2022-05-17 19:04:24.960348"]]
+  [1m[35m (7.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Voluptate dolor ut"], ["director", "Fletcher Altenwerth DO"], ["storyline", "Ex esse alias. Molestiae impedit qui. Quo fuga voluptatum."], ["watched_on", "2022-02-28"], ["created_at", "2022-05-17 19:04:24.972703"], ["updated_at", "2022-05-17 19:04:24.972703"]]
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Ipsa quia sit"], ["director", "Andre Lockman"], ["storyline", "At ut iure. Et aut corporis. Voluptatibus iure voluptas."], ["watched_on", "2022-02-13"], ["created_at", "2022-05-17 19:04:24.982351"], ["updated_at", "2022-05-17 19:04:24.982351"]]
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Repudiandae placeat voluptatem"], ["director", "Elvie Funk"], ["storyline", "Cupiditate consequatur iure. Error quae est. Et aut ipsa."], ["watched_on", "2022-01-31"], ["created_at", "2022-05-17 19:04:24.992389"], ["updated_at", "2022-05-17 19:04:24.992389"]]
+  [1m[35m (6.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Nesciunt aut voluptatem"], ["director", "Ernesto Russel"], ["storyline", "Dolor voluptatem eius. Et aperiam ut. Ea doloremque voluptatem."], ["watched_on", "2022-01-27"], ["created_at", "2022-05-17 19:04:25.001205"], ["updated_at", "2022-05-17 19:04:25.001205"]]
+  [1m[35m (4.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Aliquam aut neque"], ["director", "Pedro Bednar"], ["storyline", "Maiores eveniet eum. Dolorem quas esse. Ea rerum voluptate."], ["watched_on", "2022-03-09"], ["created_at", "2022-05-17 19:04:25.012008"], ["updated_at", "2022-05-17 19:04:25.012008"]]
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Praesentium totam aperiam"], ["director", "Joslyn Baumbach"], ["storyline", "Sapiente voluptatem animi. Ut reprehenderit totam. Illo atque qui."], ["watched_on", "2022-03-23"], ["created_at", "2022-05-17 19:04:25.021291"], ["updated_at", "2022-05-17 19:04:25.021291"]]
+  [1m[35m (6.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Voluptatem rerum voluptatem"], ["director", "Hellen Rutherford"], ["storyline", "Aliquid deserunt non. Sit adipisci corporis. Aspernatur et quia."], ["watched_on", "2022-03-19"], ["created_at", "2022-05-17 19:04:25.032918"], ["updated_at", "2022-05-17 19:04:25.032918"]]
+  [1m[35m (6.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Non nostrum velit"], ["director", "Bradley Shanahan"], ["storyline", "Autem sint ratione. Porro reiciendis voluptatem. Et iure rerum."], ["watched_on", "2022-04-25"], ["created_at", "2022-05-17 19:04:25.045085"], ["updated_at", "2022-05-17 19:04:25.045085"]]
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "movies" ("title", "director", "storyline", "watched_on", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Distinctio nisi dolor"], ["director", "Chase Rutherford"], ["storyline", "Voluptatem dolorem numquam. Sint voluptatem doloribus. Aut ipsum ut."], ["watched_on", "2022-03-31"], ["created_at", "2022-05-17 19:04:25.056562"], ["updated_at", "2022-05-17 19:04:25.056562"]]
+  [1m[35m (6.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "movies"[0m
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT  "movies"."title", "movies"."director", "movies"."storyline", "movies"."watched_on" FROM "movies" ORDER BY "movies"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
